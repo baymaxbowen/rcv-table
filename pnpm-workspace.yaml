@@ -1,0 +1,10 @@
+# pnpm workspace configuration
+packages:
+  # Core packages
+  - 'packages/*'
+  
+  # Applications
+  - 'apps/*'
+  
+  # Tools and configs
+  - 'tools/*'
