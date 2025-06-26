@@ -1,0 +1,42 @@
+{
+  "name": "@rcv-table/react",
+  "version": "0.1.0",
+  "description": "React components for RCV-Table",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "test": "vitest",
+    "clean": "rimraf dist"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "dependencies": {
+    "@rcv-table/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^4.6.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "typescript": "^5.0.0",
+    "vite": "^4.0.0",
+    "vite-plugin-dts": "^4.5.4",
+    "vitest": "^0.34.0"
+  },
+  "keywords": [
+    "react",
+    "table",
+    "canvas"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

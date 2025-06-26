@@ -1,56 +1,44 @@
 {
   "name": "rcv-table",
-  "version": "0.0.1",
-  "description": "High-performance virtual table component based on Canvas",
   "private": true,
   "type": "module",
-  "scripts": {
-    "build": "pnpm -r build",
-    "dev": "pnpm --filter playground dev",
-    "test": "pnpm -r test",
-    "lint": "pnpm -r lint",
-    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
-    "clean": "pnpm -r clean",
-    "type-check": "pnpm -r type-check",
-    "prepare": "husky install"
-  },
-  "keywords": [
-    "table",
-    "canvas",
-    "virtual-scroll",
-    "react",
-    "typescript",
-    "performance"
-  ],
-  "author": "baymaxbowen",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/baymaxbowen/rcv-table.git"
-  },
-  "bugs": {
-    "url": "https://github.com/baymaxbowen/rcv-table/issues"
-  },
-  "homepage": "https://github.com/baymaxbowen/rcv-table#readme",
-  "engines": {
-    "node": ">=16",
-    "pnpm": ">=8"
-  },
-  "packageManager": "pnpm@8.15.0",
-  "devDependencies": {
-    "@types/node": "^20.0.0",
-    "prettier": "^3.0.0",
-    "typescript": "^5.0.0",
-    "husky": "^8.0.0",
-    "lint-staged": "^15.0.0"
-  },
-  "lint-staged": {
-    "*.{ts,tsx,js,jsx}": [
+  "description": "High-performance virtual table component library",
+   "lint-staged": {
+    "*.{ts,tsx}": [
       "eslint --fix",
       "prettier --write"
     ],
-    "*.{json,md}": [
+    "*.{js,jsx,ts,tsx,json,css,md}": [
       "prettier --write"
     ]
+  },
+  "scripts": {
+    "build": "pnpm -r run build",
+    "dev": "pnpm -r --parallel run dev",
+    "test": "pnpm -r run test",
+    "playground": "pnpm --filter playground dev",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "clean": "pnpm -r run clean",
+    "type-check": "pnpm -r exec tsc --noEmit",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.29.0",
+    "eslint": "^9.29.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.2.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "prettier": "^3.6.1",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.0.0",
+    "typescript-eslint": "^8.35.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "pnpm": ">=7.0.0"
   }
 }
